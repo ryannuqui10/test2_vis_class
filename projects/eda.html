@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Data Vis Assignment 1</title>
+	<link rel="stylesheet" href="https://dig.cmu.edu/datavis-fall-2024/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 1</small>
+			Exploratory Data Analysis
+		</h1>
+
+		<p>
+			<strong>Ryan Nuqui</strong> — <em>rnuqui@andrew.cmu.edu</em>
+		</p>
+	</header>
+	<main>
+		<section>
+			<h2>Subtheme: [ENTER SUBTHEME]</h2>
+
+			<h3>Overall Analysis Questions</h3>
+			<ol>
+				<li><s>What is the relationship between zip code of incident and zip code 
+					of residence? Are most fatal overdoses likely to occur near a person’s
+					home or are there particular locations in Pittsburgh? </s>
+					<ul>
+						<li>
+							I’m mainly interested in this because I would not have thought to include 
+							both pieces of data, so their inclusion feels intentional. My initial thoughts 
+							would have me to believe that zip code of residence would be the more informative 
+							piece of information unless there are places in/near Pittsburgh that people are more 
+							likely to use drugs. 
+						</li>
+					</ul>
+				</li>
+
+				<li>With regards to the previous question, I had not realized that the data set did 
+					contain information about the zip code of residence anymore. Instead, I decided
+					to simply look at the distribution of zip codes of incidents?
+					<ul>
+						<li>
+							Similar as before, I am still interested in which areas have the
+							most incidents of fatal overdoeses. As someone who is not from
+							Pittsburgh, I would want to find out more about the history of 
+							areas of noticeably higher rates? Are they simply the places with 
+							the highest populations or could there be other factors (such as
+							economic hardships or historical effects of redlining for example).
+						</li>
+					</ul>
+				</li>
+
+				<li>Do certain drugs lead to more fatal outcomes for certain demographics? 
+					On that note, is it because certain drugs are more popular with certain 
+					groups or because they affect those groups more? 
+					<ul>
+						<li>
+							I’m curious about both the social and physical aspects of drug abuse. 
+							My (limited) knowledge about drug use would lead me to believe that 
+							younger demographics and women might be more physically affected. 
+							I’m also somewhat aware of the history of the “War on Drugs” and how 
+							it targeted impoverished communities of color and this may relate to 
+							the earlier question.  
+						</li>
+					</ul>
+				</li>
+
+				<li>Is there any pattern between the number of fatal outcomes on a temporal level? 
+					Do they mainly occur on a certain time of day or months out a year? How has the 
+					frequency changed in recent years? 
+					<ul>
+						<li>
+							I don’t particularly have any assumptions about this question besides 
+							that I imagine that most fatal overdoses would occur at nighttime since 
+							I’d imagine that’s when most people use drugs (and it’s harder to seek 
+							help from emergency services). Patterns of drug overdoses across multiple 
+							years would be interesting and linked with earlier questions, it might be interesting to see 
+							how it might be connected to the countries’ economic health (e.g. is drug 
+							overdose positively correlated with higher unemployment rates?). 
+						</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
+
+		<section>
+			<h2>Discoveries & Insights</h2>
+
+			<figure>
+				<img src="../images/zips.png" alt="" />
+				<figcaption>
+				In the dataset, there were 390 recorded values for the incident zip code which 
+				is where the medical examiner's office receives the body. However, many zip codes
+				had only 1 recorded case, so I displayed only the top 20 zip codes in terms of
+				number of fatal overdoses. Notably, the top zip codes are all across the rivers
+				from the area of Pittsburgh that contains downtown and CMU. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/numbers.png" alt="" />
+				<figcaption>
+				For each entry in the dataset, there can be up to 10 drugs that could be recorded
+				based on the autopsy drug. The figure above displayes the number of overdoses 
+				based on the number of drugs found at the time of overdose. Since a noticeably
+				large amount of deaths occur with two or three drugs found, this will add 
+				to the number of possible combinations of drugs interactions.
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/demographics.png" width="500" alt="" />
+				<figcaption>
+				While there is data for different racial groups, the dataset consists almost
+				entirely of data from "Black or African American" and "White" groups. The data is 
+				split by sex with Female on the left and Male on the right. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/years.png" alt="" />
+				<figcaption>
+				There are notable trends in the number of overdoses with a large peak in 
+				2016 and a sharp frop off at 2017. We see a moderate increase in 2020-2022. 
+				However, this raises questions about the accuracy of the data without investigating
+				further. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/months.png" alt="" />
+				<figcaption>
+				Interestingly, there seems be no noticeable differences in the number of overdoses 
+				from month to month. 
+				</figcaption>
+			</figure>
+
+			<figure>
+				<img src="../images/hours.png" alt="" />
+				<figcaption>
+				Contrary to what I believed, the most number of recorded overdoses seem to take place 
+				druing the afternoon. 
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Summary</h2>
+
+			<p> Using what we discussed in class and in the readings, I decieded to focus on only one
+				variable at a time even though my quesitons were more intended for relationships 
+				between the columns. The EDA I performed helped me immediately discover issues with 
+				the data set. 
+			</p>
+		</section>
+	</main>
+</body>
+</html>
