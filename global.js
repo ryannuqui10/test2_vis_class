@@ -51,6 +51,12 @@ document.body.insertAdjacentHTML("afterbegin", `
 	</label>`
 );
 
+if ("colorScheme" in localStorage) {
+	select.value = localStorage.colorScheme;
+	document.documentElement.style.setProperty("color-scheme", select.value);
+}
+
 select.addEventListener("input", function (event) {
 	document.documentElement.style.setProperty("color-scheme", event.target.value);
+	localStorage.colorScheme = event.target.value;
 });
