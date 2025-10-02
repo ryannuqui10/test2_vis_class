@@ -1,6 +1,7 @@
 html {
     --color-accent: oklch(65% 50% 0);
     accent-color: var(--color-accent);
+    color-scheme: dark;
 }
 
 h1 {
@@ -45,7 +46,9 @@ nav {
     display: flex;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    /* --border-color: oklch(80% 3% 200); */
+    --border-color: oklch(50% 10% 200 / 40%);
+    border-bottom-color: var(--border-color);
 }
 
 a {
@@ -75,7 +78,7 @@ img {
 .current {
     border-bottom-width: 0.4em;
     border-bottom-style: solid;
-    border-bottom-color: oklch(80% 3% 200);
+    border-bottom-color: var(--border-color);
     padding-bottom: -0.4em;
 }
 
@@ -120,4 +123,12 @@ article {
     h2 {
         margin: 0;
     }
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1.5rem;
+    right: 5rem;
+    font-size: 80%;
+    font-family: inherit;
 }
